@@ -1,0 +1,258 @@
+* {
+    /* Сбрасываем все стандартные падинги и отступы со всех элементов */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto; /*выравниваем контент по центру*/
+    background-color: black;
+}
+body {
+    /*background-color: #171c28;*/
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+}
+main {
+}
+header {
+    background-color: black;
+    color: #fff;
+    box-shadow: 0 0 15px 12px rgba(0, 0, 0, 1); /* Параметры тени */
+    position: relative;
+    z-index: 100;
+}
+.header-logo {
+    display: block;
+    max-width: 90%;
+    margin: 0 auto; /*выравниваем контент по центру*/
+}
+.five-heroes {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto; /*выравниваем контент по центру*/
+    /* box-shadow: 0 0 10px 15px rgba(0, 0, 0, 1); Параметры тени */
+    position: relative;
+}
+.match-info {
+    display: flex;
+    flex-direction: column;
+    width: 950px;
+    max-width: 90%;
+    margin: 0 auto; /*выравниваем контент по центру*/
+    /* background-image: url("../assets/prediction-wrapper-bg.jpg"); */
+    /* border-radius: 10px; */
+    margin-top: 10px;
+}
+.teams-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 60px;
+    /*font-family: trajan-pro-3, serif;*/
+    font-family: trajan-sans-pro, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    color: rgb(209, 209, 209);
+    align-items: center;
+    height: 150px;
+    /* border: 1px solid white; */
+}
+.teams-info-item {
+    text-align: center;
+    height: 100%;
+    line-height: 2.45;
+}
+.teams-info-item:nth-child(2) {
+    font-size: 50px;
+    line-height: 3.0;
+}
+.teams-info-item:nth-child(odd) {
+    width: 450px;
+}
+.teams-info-item:nth-child(odd):hover {
+    cursor: pointer;
+    background-color: rgb(11, 13, 15);
+    color:white;
+    border: 1px solid white;
+}
+.teams-info-item:nth-child(1):hover {
+    border-radius: 15px 70px;
+}
+.teams-info-item:nth-child(3):hover {
+    border-radius: 70px 15px;
+}
+.teams-icons {
+    display: none;
+    justify-content: space-between;
+    border: 1px solid white;
+}
+.teams-icons-item {
+    display: flex;
+    flex-direction: column;
+}
+.teams-icons-item:hover {
+    cursor: pointer;
+}
+.heroes-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid white; */
+    margin-top: 10px;
+}
+.heroes-info-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 475px;
+}
+.heroes-info-item:hover {
+    cursor: pointer;
+    border-radius: 10px 10px;
+    border: 1px solid  white;
+    background-color: rgb(11, 13, 15);
+}
+.heroes-icons {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+.checkableHero {
+    width: 75px;
+    height: 42px;
+}
+.checkableHero:hover {
+    cursor: pointer;
+}
+.predict-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    width: 950px;
+    /* background-image: url("../assets/prediction-wrapper-bg.jpg"); */
+    /* border: 1px solid white; */
+    /* border-radius: 5px */
+}
+.predict-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+    /* color: rgb(195, 195, 195); */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 43px;
+    font-family: trajan-sans-pro, sans-serif;
+    font-weight: 100;
+    padding: 12px 11px 12px 11px; 
+    border-radius: 5px;
+    /* border: 1px solid white; */
+    color: rgb(209, 209, 209);
+    /* background-color: rgb(109, 29, 15); */
+    background-color: rgb(110, 12, 9);
+}
+.predict-button:hover {
+    /* background-color: rgb(211, 14, 14); */
+    background-color: rgba(221, 4, 4, 0.842);
+    cursor: pointer;
+    color: white;
+    /* border: 1px solid white; */
+}
+.prediction-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin: 0 auto;
+    width: 950px;
+    /* border: 1px solid white; */
+    font-family: trajan-sans-pro, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: rgb(209, 209, 209);
+    /* margin-top: 10px; */
+    /* background-image: url("../assets/prediction-wrapper-bg.jpg"); */
+    /* border-radius: 10px; */
+    background-position-y: 100px;
+}
+.win-probability, .winrate-winrate6, .versus-winrate, .deathes-per-match, .lost-match-duration {
+    display: flex;
+    flex-direction: column;
+}
+.prediction-item-header {
+    text-align: center;
+    font-style: italic;
+    /* background-color: rgba(13, 16, 20, 0.623); */
+    /* box-shadow: inset -17px 0 10px -17px black, inset  17px 0 10px -17px black; */
+    font-size: 42px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+    background-image: url("../assets/prediction-item-header-bg2.png");
+    background-size: 970px 100%;
+    height: 60px;
+    background-position-x: -7px;
+    border-radius: 10px;
+}
+.pih {
+    padding-top: 7px;
+}
+.win-probability .prediction-item-header {
+    margin-top: 0px;
+}
+.win-probability-body, .winrate-winrate6-body, .versus-winrate-body, .deathes-per-match-body, .lost-match-duration-body {
+    display: flex;
+    flex-direction: row;
+    font-size: 27px;
+    justify-content: space-around;
+    /* font-style: italic; */
+}
+.hero-winrate-body, .versus-hero-winrate-body, .hero-counters-body {
+    display: flex;
+    flex-direction: column;
+    font-size: 27px;
+    /* font-style: italic; */
+}
+.hwb-row, .vhwb-row {
+    display: flex;
+    flex-direction: row;
+    height: 84px;
+    margin-bottom: 2px;
+}
+.hcb-row {
+    display: flex;
+    flex-direction: row;
+    height: 84px;
+    justify-content: space-evenly;
+    margin-bottom: 2px;
+}
+.hwb-radiant, .hwb-dire, .vhwb-radiant, .vhwb-dire {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    width: 475px;
+    /* border: 1px solid white; */
+}
+.hwb-item2, .vhwb-item2, .hcb-item2 {
+    line-height: 3.2;
+}
+.hcb-item2 {
+    /* border: 1px solid white; */
+    width: 100px;
+    text-align: center;
+}
+.wpb-radiant {
+    /* border: 1px solid white; */
+    color: rgba(55, 246, 55, 0.76);
+}
+.wpb-dire {
+    /* border: 1px solid white; */
+    color: rgb(221, 4, 4);
+}

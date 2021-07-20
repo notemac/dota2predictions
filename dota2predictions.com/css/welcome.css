@@ -1,0 +1,88 @@
+
+/* #region logo */
+.logo-wrapper {
+    position: relative;
+    width: 277px; height: 70px;
+    font-family: 'DINPro-Medium', sans-serif;
+    text-transform: uppercase;
+    font-size: 19px;
+    margin-left: 60px;
+    /* border:1px solid white; */
+}
+.logo-wrapper:hover, .logo-wrapper:hover .lw-item1, .logo-wrapper:hover .lw-item2 {
+    cursor: pointer;
+    color: #BCFB08;
+}
+/* .logo-wrapper:hover .mi-highlighter:before {
+    transform: scaleX(1);
+} */
+.logo-wrapper img {
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 65px; height: 68px;
+    padding-bottom: 1px; padding-top: 1px;
+    /* transition: opacity 0.4s ease 0s; */
+}
+/* .logo-wrapper:hover img.d2pl-top {
+    opacity: 0;
+} */
+.lw-item1 {
+    position: absolute;
+    top: 0px; left: 64px;
+    padding-left: 11px;
+    padding-top: 6px;
+    /* transition: color 0.4s ease 0s; */
+    /* border: 1px solid white; */
+}
+.lw-item2 {
+    position: absolute;
+    top: 25px; left: 64px;
+    padding-left: 11px;
+    padding-bottom: 3px;
+    font-size: 32px; font-weight: bold;
+    /* transition: color 0.4s ease 0s; */
+    /* border: 1px solid white; */
+}
+/* #endregion */
+
+.welcome-wrapper {
+    width: 1349px;
+    margin: 0 auto; 
+    margin-bottom: 30px;
+}
+.welcome-body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 225px;
+    text-align: center;
+    font-size: 30px;
+}
+.ww-header {
+    font-family: 'Segoe UI', sans-serif;
+    /* font-family: 'DINPro-Bold', sans-serif; */
+    font-size: 90px;
+    font-weight: 500;
+}
+.ww-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 25px;
+    border: 1px solid whitesmoke;
+    width: 320px; height: 55px;
+    padding-top: 5px;
+    background-color: #00132294;
+    border-radius: 10px;
+    transition: background-color 0.4s ease 0s;
+}
+.ww-footer:hover {
+    cursor: pointer;
+    /* border: 1px solid rgba(93, 216, 99, 0.452); */
+    background-color: rgba(93, 216, 99, 0.753);
+}
+.sign-in-steam-icon {
+    width: 35px; height: 35px;
+    margin-top: 4px;
+    margin-right: 7px;
+}

@@ -1,0 +1,233 @@
+/* #region Fonts from: http://www.cufonfonts.com */
+@font-face {
+    font-family: 'DINPro-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DINPro-Regular'), url('DINPro-Regular_13937.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DINPro-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DINPro-Bold'), url('DINPro-Bold_13934.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'DINPro-Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DINPro-Medium'), url('DINPro-Medium_13936.ttf') format('truetype');
+}
+/* #endregion */
+
+* {
+    /* Сбрасываем стандартные падинги и отступы со всех элементов */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.white {
+    color: whitesmoke;
+}
+.yellow {
+    color: #BCFB08;
+}
+.green {
+   color: rgba(55, 246, 55, 0.76); 
+}
+.red {
+    /* color: rgb(255, 45, 45); */
+    color: rgb(248, 24, 24);
+}
+html, body {
+    height: 100%; width: 100%;
+}
+body {
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    /*background-color: #171c28;*/
+    font-family: 'DINPro-Regular', sans-serif;
+    color: whitesmoke;
+    background-image: url("../assets/first5.jpg"), url("../assets/second.jpg"),
+        url("../assets/alc4.jpg"), url("../assets/magnus4.jpg");
+
+    /*БЕЗ УМЕНЬШЕНИЯ background-size: 1349px 730px, cover, cover, cover;
+    background-position-y: -20px, 680px, 1380px, 2250px; */
+    /****** УМЕНЬШЕНИЕ ДО 90% */
+    background-size: cover, cover, cover, cover;
+    background-position-y: -20px, 705px, 1430px, 2350px;
+    /******  */
+    background-repeat: no-repeat;
+    background-color: rgb(0, 19, 34);
+    min-width: 1349px;
+    /* border: 2px solid red; */
+}
+
+header {
+    position: fixed;
+    top: 0px; left: 0px;
+    width: 100%; height: 70px;
+    background-color: rgb(0, 19, 34);
+    border-bottom: 1px solid #2E3842;
+    z-index: 100;
+}
+.header-body {
+    width: 1349px; height: 70px;
+    margin: 0 auto;
+    display: flex; flex-direction: row;
+    justify-content: space-between;
+    z-index: 100;
+    /* border: 1px solid white; */
+}
+
+/* #region menu */
+.menu {
+    display: flex; flex-direction: row; 
+    justify-content: flex-end;
+    width: 700px; height: 69px;
+    margin-left: 0px;
+    /* border: 1px solid white; */
+}
+.menu-item-wrapper {
+    position: relative;
+    height: 69px;
+    text-align: center;
+    margin-right: 60px;
+    /* border: 1px solid white; */
+}
+.active-menu-item {
+    color:#BCFB08;
+}
+.active-menu-item .mi-title {
+    color:#BCFB08;
+}
+.active-menu-item .mi-highlighter {
+    background:#BCFB08;
+}
+.mi-title {
+    color: whitesmoke;
+    font-size: 20px; line-height: 3.5;
+    text-align: center; text-transform: uppercase; text-decoration: none;
+    border: none;
+    transition: color 0.4s ease 0s;
+}
+.mi-title:hover {
+    color:#BCFB08;
+    cursor: pointer;
+    /* transition: color 0.4s ease 0s; */
+}
+.mi-highlighter {
+    position: absolute; top: 69px;
+    width: 100%; height: 1px;
+}
+.mi-highlighter:before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: #BCFB08;
+    transform: scaleX(0);
+    transition: transform 0.4s ease 0s;
+}
+.mi-title:hover + .mi-highlighter:before {
+    transform: scaleX(1);
+}
+/* #region dropdown */
+.menu-item-wrapper:last-child{
+    margin-right: 80px;
+}
+.menu-item-wrapper:last-child:hover {
+    cursor: pointer;
+}
+.menu-item-wrapper:last-child:hover .user-account {
+    color: #BCFB08;
+}
+.menu-item-wrapper:last-child:hover .mi-highlighter:before {
+    transform: scaleX(1);
+}
+.user-account {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 69px;
+    color: whitesmoke;
+    line-height: 3.5;
+    font-size: 20px;
+    transition: color 0.4s ease 0s;
+}
+.user-account div:last-child {
+    transform: scale(-2, 2.5) rotate(90deg);
+    margin-top: 4px;
+    margin-right: 20px;
+}
+.menu-item-wrapper:last-child:hover .dropdown-wrapper{
+    visibility: visible;
+}
+.dropdown-wrapper {
+    /* border: 1px solid white; */
+    padding-top: 5px;
+    padding-left: 5px;
+    visibility: hidden;
+    /* background-color: rgb(0, 19, 34); */
+}
+.dropdown-wrapper ul {
+    list-style: none;
+    text-align: left;
+}
+.dropdown-wrapper ul li {
+    margin-bottom: 5px;
+}
+.dropdown-wrapper ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'DINPro-Regular', sans-serif;
+    font-size: 18px;
+    /* transition: color 0.2s ease 0s; */
+}
+.dropdown-wrapper ul li a:hover {
+    color: #BCFB08;
+}
+/* #endregion */
+
+/* #endregion */
+
+
+main {
+    height: 4000px;
+    display: flex;
+    flex-direction: column;
+    /* overflow: auto; */
+    /* background-color: #001322e3; */
+    background-color: #001322b9;
+    /* background-size: 150%; */
+    /* background-position-x: -340px; */
+    /* overflow: auto; */
+}
+.beta {
+    text-transform: none;
+    font-size: 13px;
+}
+
+
+
+/* #region footer */
+footer {
+    width: 100%; height: 60px; 
+    /* margin-top: 24px; */
+    /* margin-top: auto; */
+    background-color: rgb(0, 19, 34);
+    border-top: 1px solid rgb(255, 255, 255, 0.1);
+    margin: 0 auto;
+    /* align-self: flex-end; */
+}
+.footer-body {
+    width: 1349px;
+    margin: 0 auto;
+    height: 59px; 
+    color: #9BAFBB;
+    text-align: center; font-size: 18px; line-height: 3.4;
+    /* border: 2px solid red; */
+}
+
+/* #endregion */
+
